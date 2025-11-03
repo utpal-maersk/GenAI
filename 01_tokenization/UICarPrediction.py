@@ -2,13 +2,13 @@ import streamlit as st
 import joblib ,os
 import numpy as np
 import pandas as pd
-
-# Load the trained model
-# model = joblib.load("Hybrid_vehicle_predection_model.pkl")
 base_path = os.path.dirname(__file__)
 model_path = os.path.join(base_path, "Hybrid_vehicle_predection_model.pkl")
 
 model = joblib.load(model_path)
+
+# Load the trained model
+# model = joblib.load("Hybrid_vehicle_predection_model.pkl")
 
 st.set_page_config(page_title="Hybrid Vehicle Purchase Prediction", layout="centered")
 

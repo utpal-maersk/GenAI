@@ -78,10 +78,10 @@ if st.button("🔍 Predict Loan Eligibility"):
     st.metric(label="Predicted Repayment Probability", value=f"{prediction_percent:.2f}%")
 
     # Visual feedback
-    if prediction_percent > 40:
+    if prediction_percent > 70:
         st.success("✅ Eligible for Loan — High repayment likelihood!")
         st.progress(int(prediction_percent))
-    elif 20 <= prediction_percent <= 40:
+    elif 30 <= prediction_percent <= 70:
         st.warning("⚠️ Moderate chance — borderline eligibility.")
         st.progress(int(prediction_percent))
     else:
